@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color: blue;">Soy un titulo y mi nombre es {{nombre}} {{apellido}}</h1>
+    <p>Las notas son: {{lista_notas}}</p>
+    {% for nota in lista_notas%}
+    {% if nota < 4 %}
+    <p style="color: red;">Nota {{nota}} desaprobada</p>
+    {% else %}
+    <p style="color: green;">Nota {{nota}} aprobada</p>
+    {% endif %}
+    {% endfor %}
+</body>
+</html>
